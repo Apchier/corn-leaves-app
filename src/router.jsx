@@ -1,29 +1,37 @@
-import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
-import App from './App'
-import HomePage from './pages/home/HomePage'
-import DetectionPage from './pages/detection/DetectionPage'
-import DiseaseInfoPage from './pages/disease-info/DiseaseInfoPage'
+import MainLayout from './components/layouts/MainLayout'
+import DetectionLayout from './components/layouts/DashboardLayout'
+import AuthLayout from './components/layouts/AuthLayout'
+import DetectionPage from './pages/home/DetectionPage'
 import LoginPage from './pages/auth/LoginPage'
 import RegisterPage from './pages/auth/RegisterPage'
+import HomePage from './pages/home/HomePage'
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <App />,
+        element: <MainLayout />,
         children: [
             {
                 index: true,
                 element: <HomePage />
             },
+        ]
+    },
+    {
+        path: '/detection',
+        element: <DetectionLayout />,
+        children: [
             {
-                path: 'detection',
+                index: true,
                 element: <DetectionPage />
             },
-            {
-                path: 'disease-info',
-                element: <DiseaseInfoPage />
-            },
+        ]
+    },
+    {
+        path: '/auth',
+        element: <AuthLayout />,
+        children: [
             {
                 path: 'login',
                 element: <LoginPage />
@@ -31,7 +39,7 @@ export const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <RegisterPage />
-            }
+            },
         ]
     }
 ])
