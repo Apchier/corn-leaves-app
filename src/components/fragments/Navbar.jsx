@@ -30,7 +30,6 @@ export const Navbar = () => {
         }  
     }, [])
 
-    // Intersection Observer to detect active sections
     useEffect(() => {
         const observerOptions = {
             root: null,
@@ -48,8 +47,7 @@ export const Navbar = () => {
         }
 
         const observer = new IntersectionObserver(observerCallback, observerOptions)
-
-        // Observe all sections
+        
         const sections = ['header', 'about', 'features', 'services', 'disease-info', 'contact']
         sections.forEach(id => {
             const element = document.getElementById(id)
@@ -67,7 +65,6 @@ export const Navbar = () => {
         setActiveLink(href)  
         setIsOpen(false)
         
-        // For anchor links, scroll to section
         if (href.startsWith('#')) {
             setTimeout(() => {
                 const element = document.getElementById(href.substring(1))
@@ -77,19 +74,18 @@ export const Navbar = () => {
                         block: 'start'
                     })
                 }
-            }, 100) // Small delay to allow menu to close first
+            }, 100) 
         }
     }  
 
-    // Handle logo click to scroll to header
     const handleLogoClick = (e) => {
         e.preventDefault()
         setActiveLink('#header')
         setIsOpen(false)
         
-        // Check if we're on the homepage
+        
         if (window.location.pathname === '/') {
-            // Smooth scroll to header section
+            
             const headerElement = document.getElementById('header')
             if (headerElement) {
                 headerElement.scrollIntoView({ 
@@ -97,16 +93,15 @@ export const Navbar = () => {
                     block: 'start'
                 })
             } else {
-                // Fallback: scroll to top
+                
                 window.scrollTo({ top: 0, behavior: 'smooth' })
             }
         } else {
-            // If not on homepage, navigate to home and scroll to header
+            
             window.location.href = '/#header'
         }
     }
-
-    // Prevent body scroll when mobile menu is open
+    
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden'
@@ -119,7 +114,6 @@ export const Navbar = () => {
         }
     }, [isOpen])
 
-    // Close mobile menu on scroll
     useEffect(() => {
         const handleScrollClose = () => {
             if (isOpen) {
