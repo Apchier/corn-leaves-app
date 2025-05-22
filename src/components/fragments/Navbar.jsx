@@ -11,7 +11,7 @@ export const Navbar = () => {
     const navItems = [  
         { href: '#header', label: 'Beranda' },  
         { href: '#about', label: 'Tentang' },  
-        { href: '#features', label: 'Fitur' },  
+        { href: '#panduan', label: 'Panduan' },  
         { href: '#services', label: 'Layanan' },  
         { href: '#disease-info', label: 'Informasi Penyakit' },  
         { href: '#contact', label: 'Kontak' },
@@ -48,7 +48,7 @@ export const Navbar = () => {
 
         const observer = new IntersectionObserver(observerCallback, observerOptions)
         
-        const sections = ['header', 'about', 'features', 'services', 'disease-info', 'contact']
+        const sections = ['header', 'about', 'panduan', 'services', 'disease-info', 'contact']
         sections.forEach(id => {
             const element = document.getElementById(id)
             if (element) observer.observe(element)

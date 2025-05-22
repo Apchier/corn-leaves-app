@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { initSmoothScroll } from '../../libs/utils/smoothScroll'
 import Header from "../../components/fragments/Header"
-import Features from "../../components/fragments/Features"
+import Panduan from "../../components/fragments/Panduan"
 import About from "../../components/fragments/About"
 import Services from "../../components/fragments/Service"
 import DiseaseInfo from '../../components/fragments/DiseaseInfo'
@@ -23,7 +23,7 @@ export default function HomePage() {
 
             <About id="about" />
 
-            <Features id="features" />
+            <Panduan id="panduan" />
 
             <Services id="services" />
 

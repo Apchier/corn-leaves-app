@@ -1,7 +1,7 @@
 import {
     Stethoscope,
     BookOpen,
-    Settings,
+    Sprout,
     Database
 } from 'lucide-react'
 
@@ -9,23 +9,23 @@ const Services = () => {
     const servicesList = [
         {
             icon: Stethoscope,
-            title: 'Lorem Ipsum',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.'
+            title: 'Deteksi Penyakit',
+            description: 'Pengguna dapat mengunggah gambar daun jagung untuk dianalisis oleh sistem berbasis AI yang mendeteksi jenis penyakit secara otomatis..'
         },
         {
             icon: BookOpen,
-            title: 'Dolor Consectetur',
-            description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.'
+            title: 'Laporan Deteksi Lengkap',
+            description: 'Menampilkan hasil deteksi secara rinci, termasuk nama penyakit, penyebab utama, dan rekomendasi penanganan.'
         },
         {
-            icon: Settings,
-            title: 'Adipiscing Elit',
-            description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.'
+            icon: Sprout,
+            title: 'Informasi Penyakit',
+            description: 'Halaman khusus yang memuat informasi penyakit jagung yang sering terjadi, gejala, dan cara pencegahannya.'
         },
         {
             icon: Database,
-            title: 'Sit Amet',
-            description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.'
+            title: 'Penyimpanan Riwayat',
+            description: 'Setiap hasil deteksi disimpan agar pengguna dapat melihat kembali riwayat analisis sebelumnya.'
         }
     ]
 
@@ -33,10 +33,7 @@ const Services = () => {
         <section id="services" className="py-16 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-green-700">Lorem Ipsum Services</h2>
-                    <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
+                    <h2 className="text-3xl font-bold text-green-700">Layanan</h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router'
 import Navbar from '../fragments/Navbar'
+import Footer from '../fragments/Footer'
 
 export default function MainLayout() {
     return (
@@ -8,6 +9,7 @@ export default function MainLayout() {
             <main className="flex-grow">
                 <Outlet />
             </main>
+            <Footer />
         </div>
     )
 }
